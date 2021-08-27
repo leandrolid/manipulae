@@ -1,28 +1,29 @@
-.container {
+import styled from 'styled-components';
+
+export const FavoriteSongsContainer = styled.section`
   ul {
     list-style: none;
-    display: flex;
-    // grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     flex-wrap: wrap;
+    margin-top: 1.5rem;
 
     li {
       background: var(--white);
       border: 1px solid var(--gray-100);
       padding: 1.25rem;
       border-radius: 1.5rem;
-      flex: 1;
       width: 100%;
 
       position: relative;
       display: flex;
       align-items: center;
+      margin-bottom: 1.5rem;
 
-      img {
+      /* img {
         width: 12rem;
         height: 6rem;
         border-radius: 1.25rem;
-      }
+      } */
 
       .details {
         flex: 1;
@@ -30,7 +31,6 @@
         margin-left: 1rem;
 
         a {
-          display: block;
           color: var(--gray-800);
           font-family: Lexend, sans-serif;
           font-weight: 600;
@@ -55,24 +55,6 @@
           display: inline-block;
           margin-top: 0.5rem;
           font-size: 0.875rem;
-
-          &:last-child {
-            margin-left: 0.5rem;
-            padding-left: 0.5rem;
-            position: relative;
-
-            &::before {
-              content: '';
-              width: 4px;
-              height: 4px;
-              border-radius: 50%;
-              background: #DDD;
-              position: absolute;
-              left: 0;
-              top: 50%;
-              transform: translate(-50%, -50%);
-            }
-          }
         }
       }
 
@@ -81,8 +63,8 @@
         right: 2rem;
         bottom: 2rem;
 
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 3rem;
+        height: 3rem;
         background: var(--white);
         border: 1px solid var(--gray-100);
         border-radius: 0.675rem;
@@ -90,14 +72,23 @@
         transition: 0.2s;
 
         img {
-          width: 1.5rem;
-          height: 1.5rem;
+          width: 2.5rem;
+          height: 2.5rem;
         }
 
         &:hover {
           filter: brightness(0.9);
         }
+
+        &.close {
+          position: absolute;
+          right: -1rem;
+          top: -1rem;
+          border-radius: 50%;
+          color: var(--red-500) !important;
+          font-size: 1.5rem;
+        }
       }
     }
   }
-}
+`;

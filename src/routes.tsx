@@ -1,23 +1,25 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
+import Favorites from './pages/Favorites';
 import GlobalStyles from './styles/GlobalStyles';
-import styles from './styles/app.module.scss';
 import { Header } from './components/Header';
 import { Player } from './components/Player';
+import { Wrapper } from './styles/wrapper';
 
 function Routes() {
   return (
-    <div className={styles.wrapper}>
+    <Wrapper>
       <main>
         <Header />
         <Switch>
-          <Route path='/' exact component={Home} />
+          <Route path="/" exact component={Home} />
+          <Route path="/favorites" exact component={Favorites} />
         </Switch>
       </main>
       <Player />
       <GlobalStyles />
-    </div>
+    </Wrapper>
   );
 }
 

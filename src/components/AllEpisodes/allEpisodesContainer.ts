@@ -5,20 +5,21 @@ const AllEpisodesContainer = styled.section`
 
   table {
     width: 100%;
-    
+
     thead {
       font: 500 0.75rem Lexend, sans-serif;
       text-align: left;
       text-transform: uppercase;
       color: var(--gray-200);
-  
+
       th:last-child,
       th:first-child {
         opacity: 0;
       }
     }
 
-    th, td {
+    th,
+    td {
       padding: 0.75rem 1rem;
     }
 
@@ -28,7 +29,7 @@ const AllEpisodesContainer = styled.section`
       &.image {
         // padding: 0;
         width: 5rem;
-        
+
         img {
           min-width: 2.5rem;
           height: 2.5rem;
@@ -45,6 +46,10 @@ const AllEpisodesContainer = styled.section`
 
         &:hover {
           text-decoration: underline;
+        }
+
+        &:hover {
+          filter: brightness(0.95);
         }
       }
 
@@ -65,6 +70,18 @@ const AllEpisodesContainer = styled.section`
         &:hover {
           filter: brightness(0.95);
         }
+
+        &.active {
+          img {
+            filter: invert(0.35) sepia(1) saturate(3) hue-rotate(100deg);
+          }
+        }
+
+        &.active:hover {
+          img {
+            filter: invert(0.35) sepia(1) saturate(3) hue-rotate(100deg);
+          }
+        }
       }
 
       &.date {
@@ -72,49 +89,45 @@ const AllEpisodesContainer = styled.section`
         text-transform: capitalize;
       }
     }
-
   }
-
 
   tbody {
     tr {
-        border: 1px solid black;
+      border: 1px solid black;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .members,
+    .title {
+      max-width: 10rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .members {
+      max-width: 5rem;
+    }
+
+    .duration {
+      display: none;
+    }
+
+    .container {
+      th:last-child,
+      th:first-child,
+      td:first-child {
+        display: none;
       }
-  }
-  
-
-
-
-@media screen and (max-width: 600px) {
-  .members, .title {
-    max-width: 10rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    }
   }
 
-  .members {
-    max-width: 5rem;
-  }
-
-  .duration {
-    display: none;
-  }
-  
-  .container {
-    th:last-child,
-    th:first-child,
-    td:first-child {
+  @media screen and (max-width: 350px) {
+    .members {
       display: none;
     }
   }
-}
-
-@media screen and (max-width: 350px) {
-  .members {
-    display: none;
-  }
-}
 `;
 
 export { AllEpisodesContainer };

@@ -20,6 +20,7 @@ const GlobalStyles = createGlobalStyle`
   --gray-800: #494D4B;
   
   --green-500: #04D361;
+  --red-500: #d32304;
   
   --purple-transparent: #4553ffcc;
   --purple-300: #4553FF;
@@ -32,13 +33,14 @@ html {
   overflow: hidden;
 }
 
-body, input, textarea, button {
+body, input, textarea {
   font: 500 1rem Inter, sans-serif;
   background-color: var(--gray-50);
   color: var(--gray-500);
 }
 
 button {
+  font: 500 1rem Inter, sans-serif;
   cursor: pointer;
 }
 

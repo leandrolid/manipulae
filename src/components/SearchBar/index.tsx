@@ -1,27 +1,26 @@
 import { useState } from 'react';
 import { usePlayerContext } from '../../contexts/PlayerContext';
-import styles from './searchBar.module.scss';
+import { SearchBarContainer } from './searchBarContainer';
 
 export function SearchBar() {
   const [input, setInput] = useState('');
   const { searchSongs } = usePlayerContext();
 
   return (
-    <form
-      className={styles.container}
+    <SearchBarContainer
       onSubmit={(event) => {
         searchSongs(event, input);
         setInput('');
-    }}>
+      }}
+    >
       <input
-        type="text" name="search"
+        type="text"
+        name="search"
         value={input}
         required
         onChange={({ target }) => setInput(target.value)}
       />
-      <button type="submit">
-        Pesquisar
-      </button>
-    </form>
+      <button type="submit">Pesquisar</button>
+    </SearchBarContainer>
   );
 }

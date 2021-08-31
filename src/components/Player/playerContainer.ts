@@ -164,7 +164,7 @@ const PlayerContainer = styled.div`
 
   @media screen and (max-width: 1024px) {
     position: absolute;
-    transform: translateX(100vw);
+    /* transform: translateX(100vw); */
     width: 100vw;
 
     transform: ${() => {

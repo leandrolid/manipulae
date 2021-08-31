@@ -46,7 +46,6 @@ type PlayserContextData = {
   handleFavoriteSong: (param: Episode) => void;
   setSearch: (param: string) => void;
   setPlayingNow: (param: Episode[]) => void;
-  getInitialSongs: () => void;
   handleRemoveFavorite: (param: number) => void;
   searchSongs: (event: FormEvent, search: string) => void;
 };
@@ -149,13 +148,6 @@ export function PlayerContextProvider({ children }: PlayerProviderProps) {
     }
   }
 
-  async function getInitialSongs() {
-    setSearch('');
-    setEpisodes([]);
-    const { data } = await axios.get('/api/default');
-    setEpisodes(data.defaultSongs);
-  }
-
   function handleRemoveFavorite(index: number) {
     favoriteSongs.splice(index, 1);
     setFavoriteSongs([...favoriteSongs]);
@@ -185,7 +177,6 @@ export function PlayerContextProvider({ children }: PlayerProviderProps) {
         handleFavoriteSong,
         setSearch,
         setPlayingNow,
-        getInitialSongs,
         handleRemoveFavorite,
         searchSongs,
       }}

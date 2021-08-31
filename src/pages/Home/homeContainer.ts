@@ -28,7 +28,11 @@ export const HomeContainer = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-    padding: 0 2rem;
-    height: calc(100vh - 4.5rem);
+    padding: 0 0.5rem;
+    height: calc(100vh - 6.5rem);
+
+    .header {
+      padding: 0 1rem;
+    }
   }
 `;

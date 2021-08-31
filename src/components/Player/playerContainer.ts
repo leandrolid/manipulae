@@ -16,6 +16,7 @@ const PlayerContainer = styled.div`
   justify-content: space-between;
 
   position: relative;
+  z-index: 100;
 
   .hideButton {
     display: none;
@@ -69,9 +70,13 @@ const PlayerContainer = styled.div`
 
   .currentEpisode {
     text-align: center;
+    width: 100%;
 
     img {
-      height: 16rem;
+      width: 100%;
+      /* height: 100%; */
+      /* height: 16rem; */
+      /* width: 20rem; */
       border-radius: 1.5rem;
     }
 
@@ -236,6 +241,11 @@ const PlayerContainer = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 350px) {
+    padding: 3rem 2rem;
+  }
+
 `;
 
 export { PlayerContainer };

@@ -1,12 +1,12 @@
-import React from 'react';
 import styled from 'styled-components';
 import { usePlayerContext } from '../../contexts/PlayerContext';
 
 const HideButtonContainer = styled.button`
   display: none;
   position: absolute;
-  right: 2rem;
+  right: 0.5rem;
   top: 0.5rem;
+  margin-left: 1rem;
   padding: 0.5rem 1rem;
   text-align: center;
   vertical-align: middle;

@@ -35,6 +35,19 @@ background-color: var(--white);
     margin-left: auto;
     text-transform: capitalize;
   }
+
+  @media screen and (max-width: 600px) {
+    p {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    justify-content: center;
+    span {
+      display: none;
+    }
+  }
 `;
 
 export { HeaderContainer };

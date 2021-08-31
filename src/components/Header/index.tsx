@@ -1,6 +1,7 @@
 import format from 'date-fns/format';
 import ptBR from 'date-fns/locale/pt-BR';
 import { Link } from 'react-router-dom';
+import HideButton from '../HideButton';
 
 import { HeaderContainer } from './headerContainer';
 
@@ -13,7 +14,8 @@ export function Header() {
         <div title="Devcast logo" />
       </Link>
       <p>O melhor para você ouvir. Sempre!</p>
-      <span>{currentDate}</span>
+      <span>{ currentDate }</span>
+      <HideButton />
     </HeaderContainer>
   );
 }

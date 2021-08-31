@@ -21,4 +21,9 @@ export const SearchBarContainer = styled.form`
     margin-left: 10px;
     background-color: #ddd;
   }
+
+  @media screen and (max-width: 600px) {
+    padding: 0 1rem;
+  }
+
 `;

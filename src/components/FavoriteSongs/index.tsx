@@ -20,7 +20,7 @@ export function FavoriteSongs() {
         {favoriteSongs.map((episode, index) => {
           return (
             <li key={episode.id}>
-              <Image width={200} episode={episode} />
+              <Image width={100} episode={episode} />
               <div className="details">
                 <Link to={episode.link} target="_blank">
                   {episode.title}

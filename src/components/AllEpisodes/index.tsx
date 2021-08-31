@@ -23,14 +23,14 @@ export function AllEpisodes() {
       <table cellSpacing={0}>
         <thead>
           <tr>
-            <th className="hiddenTitle">Capa</th>
-            <th className="title">Título</th>
+            <th className="image">Capa</th>
+            <th className="title">Música</th>
             <th className="members" title="Integrantes">
               Cantor
             </th>
             <th className="duration">Duração</th>
-            <th className="hiddenTitle">Favorito</th>
-            <th className="hiddenTitle">Tocar</th>
+            <th className="favorite">Fav</th>
+            <th>Tocar</th>
           </tr>
         </thead>
 
@@ -55,15 +55,18 @@ export function AllEpisodes() {
                   >
                     {episode.title}
                   </Link>
+                  <div className="mobileSinger">
+                    { episode.members}
+                  </div>
                 </td>
 
-                <td className="members} title={episode.members">
+                <td className="members" title={ episode.members }>
                   {episode.members}
                 </td>
 
                 <td className="duration">{episode.durationAsString}</td>
 
-                <td>
+                <td className="favorite">
                   <button
                     type="button"
                     onClick={() => handleFavoriteSong(episode)}

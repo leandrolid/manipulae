@@ -89,19 +89,33 @@ const AllEpisodesContainer = styled.section`
         text-transform: capitalize;
       }
     }
+
+    tbody {
+      tr {
+        border: 1px solid black;
+      }
+    }
+
   }
 
-  tbody {
-    tr {
-      border: 1px solid black;
-    }
+  .mobileSinger {
+    display: none;
+  }
+
+  .favorite {
+    width: 0.5rem;
+    text-align: center;
   }
 
   @media screen and (max-width: 600px) {
+    h2 {
+      margin-left: 1rem;
+    }
+
     .members,
     .title {
       max-width: 10rem;
-      white-space: nowrap;
+      /* white-space: nowrap; */
       overflow: hidden;
       text-overflow: ellipsis;
     }
@@ -110,9 +124,9 @@ const AllEpisodesContainer = styled.section`
       max-width: 5rem;
     }
 
-    .duration {
+    /* .duration {
       display: none;
-    }
+    } */
 
     .container {
       th:last-child,
@@ -121,10 +135,31 @@ const AllEpisodesContainer = styled.section`
         display: none;
       }
     }
+
+    .members {
+      display: none;
+      font-size: 3rem;
+    }
+
+    .mobileSinger {
+    display: block;
+  }
   }
 
-  @media screen and (max-width: 350px) {
-    .members {
+  /* @media screen and (max-width: 480px) {
+    .image {
+      display: none;
+    }
+  } */
+
+  /* @media screen and (max-width: 380px) {
+    .favorite {
+      display: none;
+    }
+  } */
+
+  @media screen and (max-width: 375px) {
+    .duration {
       display: none;
     }
   }

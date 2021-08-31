@@ -34,8 +34,8 @@ export default function Image({
     <img
       style={{
         width: `${width ? width + 'px' : '100%'}`,
-        height: '100%',
-        maxHeight: '20rem',
+        // height: '100%',
+        // maxHeight: '20rem',
         borderRadius: `${borderRadius ? borderRadius + 'rem' : '1.25rem'}`,
       }}
       src={episode.thumbnail}

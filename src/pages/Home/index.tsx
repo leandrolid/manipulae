@@ -5,7 +5,7 @@ import { AllEpisodes } from '../../components/AllEpisodes';
 import { usePlayerContext } from '../../contexts/PlayerContext';
 import { SearchBar } from '../../components/SearchBar';
 import { HomeContainer } from './homeContainer';
-import HideButton from '../../components/HideButton';
+// import HideButton from '../../components/HideButton';
 import { Loading } from '../../components/LoadingItems';
 import { getDefaultSongs } from '../../services/default';
 
@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <HomeContainer>
       <SearchBar />
-      <HideButton />
+      {/* <HideButton /> */}
       <div className="header">
         <h2>{search ? `Resultados para: ${search}` : 'Em alta'}</h2>
         <Link to="/favorites" className="favorites">

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { usePlayerContext } from '../../contexts/PlayerContext';
 import { AllEpisodesContainer } from './allEpisodesContainer';
 
@@ -48,13 +47,14 @@ export function AllEpisodes() {
                 </td>
 
                 <td className="title">
-                  <Link
-                    to={episode.link ? episode.link : '/'}
+                  <a
+                    href={ episode.link ? episode.link : '/' }
+                    rel="noreferrer"
                     target="_blank"
                     title={episode.title}
                   >
                     {episode.title}
-                  </Link>
+                  </a>
                   <div className="mobileSinger">
                     { episode.members}
                   </div>

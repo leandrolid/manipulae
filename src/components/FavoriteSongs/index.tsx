@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { usePlayerContext } from '../../contexts/PlayerContext';
 
 import { FavoriteSongsContainer } from './favoriteSongsContainer';
@@ -22,9 +21,9 @@ export function FavoriteSongs() {
             <li key={episode.id}>
               <Image width={100} episode={episode} />
               <div className="details">
-                <Link to={episode.link} target="_blank">
+                <a href={episode.link} rel="noreferrer" target="_blank">
                   {episode.title}
-                </Link>
+                </a>
                 <p>{episode.members}</p>
                 <span>{episode.durationAsString}</span>
               </div>

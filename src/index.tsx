@@ -6,11 +6,11 @@ import Routes from './routes';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <PlayerContextProvider>
+    <PlayerContextProvider>
+      <BrowserRouter>
         <Routes />
-      </PlayerContextProvider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </PlayerContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
